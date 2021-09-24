@@ -17,3 +17,41 @@ Operator Installtion
   deployment.apps/rabbitmq-cluster-operator created
   
 ```
+
+
+
+RabittMQ cluster yaml file
+
+```yml
+# vim rabbit-cluster.yml
+
+apiVersion: rabbitmq.com/v1beta1
+kind: RabbitmqCluster
+metadata:
+  name: rabbitmq-cluster
+spec:
+  replicas: 3
+  persistence:
+   storageClassName: tispring
+   storage: 50Gi
+  resources:
+    requests:
+      cpu: 100m
+      memory: 0.4Gi
+    limits:
+      cpu: 100m
+      memory: 0.5Gi
+
+
+```
+
+
+RabbitMQ cluster installtion
+
+
+```bash
+
+kubectl create ns queue
+kubectl apply -f rabbit-cluster.yml -n queue
+
+```
