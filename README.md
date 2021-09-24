@@ -55,3 +55,25 @@ kubectl create ns queue
 kubectl apply -f rabbit-cluster.yml -n queue
 
 ```
+
+login details
+
+```bash
+
+# user Details
+kubectl get secret rabbitmq-cluster-default-user -n queue -o jsonpath='{.data.username}' | base64 --decode
+
+# Password Details
+kubectl get secret rabbitmq-cluster-default-user -n queue -o jsonpath='{.data.password}' | base64 --decode
+
+```
+
+
+UI access
+
+
+```bash
+
+ kubectl port-forward --address 0.0.0.0 svc/rabbitmq-cluster 15672 -n queue
+
+```
