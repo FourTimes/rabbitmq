@@ -78,4 +78,4 @@ UI access
 
 ```
 
-![RabbitMQ](_1.png)
+![RabbitMQ](_rabbitMq.png)
