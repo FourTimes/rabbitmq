@@ -1,4 +1,4 @@
-# rabbitmq
+# Rabbitmq
 
 
 Operator Installtion
