@@ -77,3 +77,5 @@ UI access
  kubectl port-forward --address 0.0.0.0 svc/rabbitmq-cluster 15672 -n queue
 
 ```
+
+![RabbitMQ](_1.png)
